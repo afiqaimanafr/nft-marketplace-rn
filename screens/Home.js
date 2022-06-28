@@ -8,6 +8,17 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
       <FocusedStatusBar background={COLORS.primary} />
+      <View style={{ flex: 1 }}>
+        <View style={{ zIndex: 0 }}>
+          <FlatList
+            data={NFTData}
+            renderItem={({ item }) => <Text>{item.name}</Text>}
+            keyExtractor={(item) => item.id}
+            showsVerticalScrollIndicator={false}
+            ListHeaderComponent={<HomeHeader />}
+          />
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
