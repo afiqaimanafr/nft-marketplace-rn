@@ -15,6 +15,8 @@ const theme = {
 };
 
 const App = () => {
+  const [loaded] = useFonts({});
+
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
